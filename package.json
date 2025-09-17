@@ -9,8 +9,8 @@
     "build:dev": "webpack --mode development",
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,json,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,json,md}\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "pre-commit": "npm run lint && npm run format:check && npm run type-check"
   },
