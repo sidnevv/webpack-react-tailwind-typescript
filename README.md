@@ -1,6 +1,6 @@
 # React + TypeScript + Tailwind CSS + Webpack Boilerplate
-### Современный шаблон для разработки React-приложений с TypeScript, Tailwind CSS и Webpack.
 
+### Современный шаблон для разработки React-приложений с TypeScript, Tailwind CSS и Webpack.
 
 ## 🚀 Технологии
 

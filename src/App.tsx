@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import Button from './components/Button';
-import Card from './components/Card';
+
+import Button from './components/Button/Button';
+import Card from './components/Card/Card';
 
 const App: React.FC = () => {
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState('');
 
   const handleIncrement = () => {
-    setCount(prev => prev + 1);
+    setCount((prev) => prev + 1);
     setMessage(`Count increased to ${count + 1}`);
   };
 
   const handleDecrement = () => {
-    setCount(prev => prev - 1);
+    setCount((prev) => prev - 1);
     setMessage(`Count decreased to ${count - 1}`);
   };
 
@@ -25,24 +26,16 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <div className="container mx-auto max-w-4xl">
         <header className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            React + TypeScript + Tailwind
-          </h1>
-          <p className="text-lg text-gray-600">
-            Built with Webpack and modern tooling
-          </p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2">React + TypeScript + Tailwind</h1>
+          <p className="text-lg text-gray-600">Built with Webpack and modern tooling</p>
         </header>
 
         <main className="space-y-6">
           <Card>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Counter Example
-            </h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Counter Example</h2>
 
             <div className="text-center mb-6">
-              <div className="text-6xl font-bold text-blue-600 mb-4">
-                {count}
-              </div>
+              <div className="text-6xl font-bold text-blue-600 mb-4">{count}</div>
 
               <div className="flex justify-center gap-4 mb-6">
                 <Button onClick={handleDecrement} variant="secondary">
@@ -65,18 +58,14 @@ const App: React.FC = () => {
           </Card>
 
           <Card>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Features
-            </h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <h3 className="font-semibold text-blue-700 mb-2">React 18</h3>
                 <p className="text-sm text-gray-600">Latest React with hooks</p>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
-                <h3 className="font-semibold text-green-700 mb-2">
-                  TypeScript
-                </h3>
+                <h3 className="font-semibold text-green-700 mb-2">TypeScript</h3>
                 <p className="text-sm text-gray-600">Full type safety</p>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
